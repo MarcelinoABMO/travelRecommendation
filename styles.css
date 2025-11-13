@@ -1,0 +1,65 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*border: 1px solid yellow;*/
+}
+
+body {
+    size: 12pt;
+    color: white;
+    background-color: grey;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: auto;
+    background-color: black;
+    padding: 0.3em;
+    align-items: center;
+}
+
+/*.logo-container {
+    width: 10em;
+}*/
+
+.nav {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 2em;
+
+    border: 1px solid magenta;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid cyan;
+}
+
+.nav-menu a {
+    margin: 0 0.5em 0 0.5em;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 1em;
+    padding: 0.2em;
+
+    border: 1px solid yellow;
+}
+
+main {
+    position: absolute;
+    top: 5em;
+    padding: 1em;
+}
