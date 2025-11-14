@@ -17,8 +17,11 @@
 body {
     size: 12pt;
     color: white;
+    display: flex;
     background-image: url("./img/paisagem-bg.jpg");
     background-size: cover;
+    min-height: 100vb;
+    min-width: 100vb;
     /*background-position: center;*/
 }
 
@@ -96,8 +99,31 @@ header {
     color: yellow;
 }
 
+aside {
+    display: block;
+    padding: 6em 0.5em 0.5em;
+    background-color: var(--color-4);
+    min-height: 100%;
+}
+
+aside nav {
+    display: grid;
+    grid-template-columns: 1;
+}
+
+aside nav a img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/*.main-content*/
 main {
-    position: absolute;
-    top: 5em;
-    padding: 1em;
+    display: grid;
+
+    flex-grow: 1;
+    grid-template-columns: 50% 50%;
+    color: var(--color-1);
+    background-image: linear-gradient(to right, var(--color-4), rgb(0, 0, 0, 0));
+    padding: 6em 3em 3em 3em;
+    min-height: 100%;
 }
