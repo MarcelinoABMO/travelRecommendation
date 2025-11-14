@@ -3,14 +3,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 
     /*border: 1px solid yellow;*/
+    --color-1: #355c7d;
+    --color-2: #6c5b7b;
+    --color-3: #c06c84;
+    --color-4: #f67280;
+    --color-5: #f8b195;
+    --color-6: #ffe4da;
 }
 
 body {
     size: 12pt;
     color: white;
-    background-color: grey;
+    background-image: url("./img/paisagem-bg.jpg");
+    background-size: cover;
+    /*background-position: center;*/
 }
 
 header {
@@ -19,14 +28,22 @@ header {
     display: grid;
     grid-template-columns: 20% 80%;
     height: auto;
-    background-color: black;
+    background-color: var(--color-1);
     padding: 0.3em;
     align-items: center;
 }
 
-/*.logo-container {
-    width: 10em;
-}*/
+.logo-container {
+    /*width: 10em;*/
+    display: flex;
+    align-items: center;
+}
+
+.lc-text {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+}
 
 .nav {
     display: grid;
@@ -46,16 +63,37 @@ header {
 
 .nav-menu a {
     margin: 0 0.5em 0 0.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu a:hover {
+    font-weight: bold;
 }
 
 .input-container {
     display: flex;
     justify-content: space-evenly;
+    align-items: end;
     background-color: white;
     border-radius: 1em;
     padding: 0.2em;
 
     border: 1px solid yellow;
+}
+
+.input-container button {
+    background-color: #355c7d;
+    color: var(--color-5);
+}
+
+.input-container button:hover {
+    background-color: var(--color-2);
+    color: #f8b195;
+}
+
+.input-container button:active {
+    color: yellow;
 }
 
 main {
