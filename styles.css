@@ -101,7 +101,7 @@ header {
 
 aside {
     display: block;
-    padding: 6em 0.5em 0.5em;
+    padding: 6em 0 0;
     background-color: var(--color-4);
     min-height: 100%;
 }
@@ -109,21 +109,45 @@ aside {
 aside nav {
     display: grid;
     grid-template-columns: 1;
+    width: 2em;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+aside nav a {
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+aside nav a:hover {
+    width: 2em;
+    height: 2em;
 }
 
 aside nav a img {
-    width: 1.5em;
-    height: 1.5em;
+    flex-grow: 1;
 }
 
 /*.main-content*/
 main {
     display: grid;
-
     flex-grow: 1;
     grid-template-columns: 50% 50%;
     color: var(--color-1);
     background-image: linear-gradient(to right, var(--color-4), rgb(0, 0, 0, 0));
-    padding: 6em 3em 3em 3em;
+    padding: 4em 2em 1em 2em;
     min-height: 100%;
+}
+
+main section {
+    padding: 1em;
+}
+
+h1 {
+    padding: 0.5em 0;
+}
+
+p {
+    padding: 0.25em 0;
 }
