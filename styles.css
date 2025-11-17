@@ -1,5 +1,5 @@
 * {
-    border: 0;
+    /*border: 0;*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +12,7 @@
     --color-4: #f67280;
     --color-5: #f8b195;
     --color-6: #ffe4da;
+    --gradient-6: rgb(255, 228, 218, 0.5);
 }
 
 body {
@@ -40,6 +41,7 @@ header {
     /*width: 10em;*/
     display: flex;
     align-items: center;
+    color: var(--color-6);
 }
 
 .lc-text {
@@ -67,11 +69,14 @@ header {
 .nav-menu a {
     margin: 0 0.5em 0 0.5em;
     text-decoration: none;
-    color: white;
+    color: var(--color-6);
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-menu a:hover {
     font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.2s ease-in-out;
 }
 
 .input-container {
@@ -100,33 +105,58 @@ header {
 }
 
 aside {
-    display: block;
-    padding: 6em 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5em 0 0;
     background-color: var(--color-4);
     min-height: 100%;
+
+    /*border: 1px solid yellow;*/
+}
+
+aside div {
+    flex-grow: 1;
+    padding: 1em 0;
+}
+
+aside div div {
+    background-image: linear-gradient(to bottom, var(--gradient-6), var(--color-6), var(--gradient-6));
+    width: 0.25em;
+    height: 100%;
+    border-radius: 0.5em;
 }
 
 aside nav {
-    display: grid;
-    grid-template-columns: 1;
-    width: 2em;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 3em;
+    height: fit-content;
+    align-items: center;
     gap: 0.5em;
+
+    /*border: 1px solid lightgreen;*/
 }
 
 aside nav a {
     display: flex;
     width: 1.5em;
     height: 1.5em;
+    transition: all 0.3s ease-in-out;
+
+    /*border: 1px solid yellow;*/
 }
 
 aside nav a:hover {
     width: 2em;
     height: 2em;
+    transition: all 0.2s ease-in-out;
 }
 
 aside nav a img {
-    flex-grow: 1;
+    max-width: 100%;
+    height: auto;
+    /*filter: var(--color-6);*/
 }
 
 /*.main-content*/
