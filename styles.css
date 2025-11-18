@@ -53,9 +53,9 @@ header {
 .nav {
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 2em;
+    height: 1.8em;
 
-    border: 1px solid magenta;
+    /*border: 1px solid magenta;*/
 }
 
 .nav-menu {
@@ -63,7 +63,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    border: 1px solid cyan;
+    /*border: 1px solid cyan;*/
 }
 
 .nav-menu a {
@@ -81,18 +81,28 @@ header {
 
 .input-container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: end;
+    flex-direction: row;
+    justify-content:flex-end;
+    gap: 0.5em;
+    align-items: center;
     background-color: white;
     border-radius: 1em;
-    padding: 0.2em;
+    padding: 0.2em 0.5em;
 
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
+}
+
+.input-container input {
+    border: none;
+    height: 1.5em;
+    flex-grow: 1;
 }
 
 .input-container button {
     background-color: #355c7d;
     color: var(--color-5);
+    font-size: 1.2em;
+    border-radius: 0.4em;
 }
 
 .input-container button:hover {
