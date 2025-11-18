@@ -6,7 +6,8 @@
     font-family: sans-serif;
 
     /*border: 1px solid yellow;*/
-    --color-1: #355c7d;
+    --color-0: #38303d;
+    --color-1: #35487d;
     --color-2: #6c5b7b;
     --color-3: #c06c84;
     --color-4: #f67280;
@@ -28,11 +29,13 @@ body {
 
 header {
     position: fixed;
+    z-index: 999;
     width: 100%;
-    display: grid;
-    grid-template-columns: 20% 80%;
+    display: flex;
+    flex-direction: row;
+    /*grid-template-columns: 20% 80%;*/
     height: auto;
-    background-color: var(--color-1);
+    background-color: var(--color-0);
     padding: 0.3em;
     align-items: center;
 }
@@ -53,6 +56,7 @@ header {
 .nav {
     display: grid;
     grid-template-columns: 50% 50%;
+    flex-grow: 1;
     height: 1.8em;
 
     /*border: 1px solid magenta;*/
@@ -88,6 +92,7 @@ header {
     background-color: white;
     border-radius: 1em;
     padding: 0.2em 0.5em;
+    min-width: min-content;
 
     /*border: 1px solid yellow;*/
 }
@@ -115,12 +120,15 @@ header {
 }
 
 aside {
+    position: fixed;
+    z-index: 998;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2.5em 0 0;
-    background-color: var(--color-4);
-    min-height: 100%;
+    /*background-color: var(--color-4);*/
+    /*min-height: 100%;*/
+    height: 100vh;
 
     /*border: 1px solid yellow;*/
 }
@@ -174,9 +182,10 @@ main {
     display: grid;
     flex-grow: 1;
     grid-template-columns: 50% 50%;
-    color: var(--color-1);
+    color: var(--color-0);
     background-image: linear-gradient(to right, var(--color-4), rgb(0, 0, 0, 0));
-    padding: 4em 2em 1em 2em;
+    /*top, right, bottom, left*/
+    padding: 6em 2em 1em 6em;
     min-height: 100%;
 }
 
@@ -186,6 +195,15 @@ main section {
 
 h1 {
     padding: 0.5em 0;
+    /*font-size: 2.4em;*/
+    text-transform:uppercase;
+    font-weight:800;
+}
+
+h2 {
+    padding: 0.35em 0;
+    text-transform:uppercase;
+    font-weight:800;
 }
 
 p {
