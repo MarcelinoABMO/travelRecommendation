@@ -1,0 +1,57 @@
+* {
+    --color-1-transp: #38303d99;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0.5em;
+}
+
+.team-member-container {
+    min-width: 6em;
+    max-width: 8em;
+    /*max-height: 12em;*/
+    height: auto;
+    background-color: var(--color-1-transp);
+    color: var(--color-6);
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
+
+.tm-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.tm-main span {
+    display: block;
+    /*justify-content: center;*/
+}
+
+.tm-name {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.tm-description {
+    font-size: 0.8em;
+}
+
+.tm-role {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    color: var(--color-2);
+    background-color: var(--color-5);
+    /*box-sizing: content-box;*/
+    padding: 0.2em 0.4em;
+}
+
+.tm-side img {
+    min-width: 6em;
+    width: 100%;
+    height: auto;
+}
