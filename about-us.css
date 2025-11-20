@@ -3,31 +3,34 @@
 }
 
 .team-container {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
     gap: 0.5em;
+    flex-wrap: wrap;
 }
 
 .team-member-container {
+    display: flex;
+    flex-direction: column;
     min-width: 6em;
     max-width: 8em;
-    /*max-height: 12em;*/
     height: auto;
     background-color: var(--color-1-transp);
     color: var(--color-6);
     padding: 0.5em;
     border-radius: 0.2em;
+    gap: 0.2em;
 }
 
 .tm-main {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
     gap: 0.4em;
 }
 
 .tm-main span {
     display: block;
-    /*justify-content: center;*/
 }
 
 .tm-name {
@@ -36,22 +39,20 @@
 }
 
 .tm-description {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 .tm-role {
     font-size: 0.8em;
     font-weight: bold;
     text-align: center;
-    align-self: center;
     color: var(--color-2);
     background-color: var(--color-5);
-    /*box-sizing: content-box;*/
     padding: 0.2em 0.4em;
 }
 
 .tm-side img {
-    min-width: 6em;
-    width: 100%;
+    min-width: 4em;
+    width: 70%;
     height: auto;
 }

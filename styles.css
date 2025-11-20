@@ -1,11 +1,9 @@
 * {
-    /*border: 0;*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 
-    /*border: 1px solid yellow;*/
     --color-0: #38303d;
     --color-1: #35487d;
     --color-2: #6c5b7b;
@@ -13,6 +11,7 @@
     --color-4: #f67280;
     --color-5: #f8b195;
     --color-6: #ffe4da;
+    --gradient-4: #f6728022;
     --gradient-6: rgb(255, 228, 218, 0.5);
 }
 
@@ -21,10 +20,11 @@ body {
     color: white;
     display: flex;
     background-image: url("./img/paisagem-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
     background-size: cover;
     min-height: 100vb;
-    min-width: 100vb;
-    /*background-position: center;*/
 }
 
 header {
@@ -33,7 +33,6 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    /*grid-template-columns: 20% 80%;*/
     height: auto;
     background-color: var(--color-0);
     padding: 0.3em;
@@ -41,7 +40,6 @@ header {
 }
 
 .logo-container {
-    /*width: 10em;*/
     display: flex;
     align-items: center;
     color: var(--color-6);
@@ -126,8 +124,6 @@ aside {
     flex-direction: column;
     align-items: center;
     padding: 2.5em 0 0;
-    /*background-color: var(--color-4);*/
-    /*min-height: 100%;*/
     height: 100vh;
 
     /*border: 1px solid yellow;*/
@@ -177,13 +173,11 @@ aside nav a img {
     /*filter: var(--color-6);*/
 }
 
-/*.main-content*/
 main {
-    display: grid;
-    flex-grow: 1;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-wrap: wrap;
     color: var(--color-0);
-    background-image: linear-gradient(to right, var(--color-4), rgb(0, 0, 0, 0));
+    background-image: linear-gradient(to right, var(--color-4), var(--gradient-4));
     /*top, right, bottom, left*/
     padding: 6em 2em 1em 6em;
     min-height: 100%;
@@ -191,6 +185,8 @@ main {
 
 main section {
     padding: 1em;
+    min-width: 20em;
+    flex: 1;
 }
 
 h1 {
@@ -207,5 +203,6 @@ h2 {
 }
 
 p {
-    padding: 0.25em 0;
+    padding: 0.3em 0;
+    line-height: 1.5;
 }
