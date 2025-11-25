@@ -1,0 +1,36 @@
+#contact-form {
+    padding: 1em;
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+    border-radius: 1em;
+    background-color: var(--color-1-transp);
+}
+
+#contact-form form label {
+    color: var(--color-6);
+}
+
+#contact-form form input {
+    border-radius: 0.5em;
+    color: var(--color-6);
+}
+
+.cf-input {
+    padding: 0.5em;
+    border: 1px solid grey;
+    border-radius: 0.5em;
+    background-color: rgb(0, 0, 0, 0);
+    color: var(--color-6);
+}
+
+.cf-submit {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: var(--color-4);
+}

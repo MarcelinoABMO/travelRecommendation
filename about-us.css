@@ -1,6 +1,6 @@
-* {
+/** {
     --color-1-transp: #38303d99;
-}
+}*/
 
 .team-container {
     display: flex;

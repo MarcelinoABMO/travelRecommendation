@@ -4,6 +4,7 @@
         <title>TravelFar.com</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./contact-us.css">
     </head>
     <body>
         <header>
@@ -13,9 +14,9 @@
         </div>
         <nav class="nav">
             <div class="nav-menu">
-                <a href="./travel_recommendation.html">Início</a>
-                <a href="./about-us.html">Sobre</a>
-                <a href="./contact-us.html">Contato</a>
+                <a href="./travel_recommendation.html">Home</a>
+                <a href="./about-us.html">About Us</a>
+                <a href="./contact-us.html">Contact Us</a>
             </div>
         </nav>
         </header>
@@ -31,21 +32,21 @@
         </aside>
         <main>
             <section class="static-content">
-                <h1>Contate-nos</h1>
+                <h1>Contact us</h1>
                 <p>
-                    Bla
+                    Get in touch
                 </p>
             </section>
             <section id="contact-form">
 
                 <form action="">
-                    <label for="cf-name">Nome</label>
-                    <input type="text" id="cf-name" name="cf-name">
+                    <label for="cf-name">Name</label>
+                    <input type="text" id="cf-name" name="cf-name" class="cf-input">
                     <label for="cf-email">Email</label>
-                    <input type="text" id="cf-email" name="cf-email">
-                    <label for="cf-msg">Mensagem</label>
-                    <input type="text" id="cf-msg" name="cf-msg">
-                    <input type="submit" value="Enviar">
+                    <input type="text" id="cf-email" name="cf-email" class="cf-input">
+                    <label for="cf-msg">Message</label>
+                    <textarea id="cf-msg" name="cf-msg" rows="5" class="cf-input"></textarea>
+                    <input type="submit" value="Submit" class="cf-submit">
                 </form>
             </section>
         </main>
