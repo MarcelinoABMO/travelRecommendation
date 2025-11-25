@@ -34,10 +34,29 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: auto;
+    height: fit-content;
     background-color: var(--color-0);
-    padding: 0.3em;
+    padding: 0.6em 0.3em;
     align-items: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    row-gap: 0.5em;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 20em;
+    max-width: 30em;
 }
 
 .logo-container {
@@ -50,23 +69,6 @@ header {
     font-family: sans-serif;
     font-weight: bold;
     font-size: 1em;
-}
-
-.nav {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    flex-grow: 1;
-    height: 1.8em;
-
-    /*border: 1px solid magenta;*/
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /*border: 1px solid cyan;*/
 }
 
 .nav-menu a {
@@ -85,15 +87,15 @@ header {
 .input-container {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
     justify-content:flex-end;
     gap: 0.5em;
     align-items: center;
     background-color: white;
     border-radius: 1em;
     padding: 0.2em 0.5em;
+    margin: 0 0.5em;
     min-width: min-content;
-
-    /*border: 1px solid yellow;*/
 }
 
 .input-container input {
@@ -124,15 +126,13 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.5em 0 0;
+    padding: 4em 0 0;
     height: 100vh;
-
-    /*border: 1px solid yellow;*/
 }
 
 aside div {
     flex-grow: 1;
-    padding: 1em 0;
+    padding: 2.5em 0;
 }
 
 aside div div {
@@ -149,8 +149,6 @@ aside nav {
     height: fit-content;
     align-items: center;
     gap: 0.5em;
-
-    /*border: 1px solid lightgreen;*/
 }
 
 aside nav a {
@@ -158,8 +156,6 @@ aside nav a {
     width: 1.5em;
     height: 1.5em;
     transition: all 0.3s ease-in-out;
-
-    /*border: 1px solid yellow;*/
 }
 
 aside nav a:hover {
@@ -171,7 +167,6 @@ aside nav a:hover {
 aside nav a img {
     max-width: 100%;
     height: auto;
-    /*filter: var(--color-6);*/
 }
 
 main {
@@ -180,7 +175,7 @@ main {
     color: var(--color-0);
     background-image: linear-gradient(to right, var(--color-4), var(--gradient-4));
     /*top, right, bottom, left*/
-    padding: 6em 2em 1em 6em;
+    padding: 6.5em 2em 1em 6em;
     min-height: 100%;
     min-width: 100vw;
 }
@@ -193,7 +188,6 @@ main section {
 
 h1 {
     padding: 0.5em 0;
-    /*font-size: 2.4em;*/
     text-transform:uppercase;
     font-weight:800;
 }
