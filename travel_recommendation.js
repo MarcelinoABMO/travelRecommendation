@@ -1,17 +1,20 @@
 const input = document.getElementById("search-input");
 document.getElementById("search-btn").onclick = searchCommand;
 
-function searchCommand() {
+async function searchCommand() {
     let inputVal = input.value.toLowerCase();
     if (inputVal == "") return;
 
-    fetch("./travel_recommendation_api.json", {method: "GET"})
-        .then(response => {
-            const result = JSON.parse(response);
-            const resultVal = searchAPI(inputVal, result);
-        }).catch(error => {
-            console.log(error);
-        });
+    try {
+        const response = await fetch("./travel_recommendation_api.json", {method: "GET"});
+        if (!response.ok) throw new Error(`Response status: ${response.status}`);
+
+        const result = await response.json();
+        const resultVal = searchAPI(inputVal, result);
+    }
+    catch(error) {
+        throw new Error(error.message);
+    }
 }
 
 function searchAPI(inputVal, api) {
