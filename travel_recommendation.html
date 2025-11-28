@@ -4,6 +4,7 @@
         <title>TravelFar.com</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./search-location.css">
     </head>
     <body>
         <header>
@@ -47,6 +48,18 @@
             </section>
             <section id="recommendation-conteiner" class="dynamic-content">
                 <!-- scripted content -->
+                <div id="rc-search-results-container" class="hidden">
+                    <!-- template -->
+                    <span id="rc-search-results-log">Results for Bla</span>
+                    <div id="search-result-card-template" class="search-result-card">
+                        <img src="https://danso.info/wp-content/uploads/2025/04/image-11-1024x683.png" alt="" class="sr-img">
+                        <div class="sr-info-container">
+                            <span class="sr-name">Bla, Blabla</span>
+                            <p class="sr-description">blablabla blablabla...</p>
+                            <button class="sr-visit-btn">Visit</button>
+                        </div>
+                    </div>
+                </div>
             </section>
         <!--</div>-->
         </main>

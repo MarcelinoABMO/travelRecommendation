@@ -1,0 +1,40 @@
+#rc-search-results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#rc-search-results-log {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    color: var(--color-6);
+    background-color: var(--color-1-transp);
+}
+
+.search-result-card {
+    display: flex;
+    flex-direction: column;
+    /*row-gap: 1em;*/
+    border-radius: 0.5em;
+    overflow: hidden;
+    color: var(--color-1);
+    background-color: var(--color-6);
+}
+
+.sr-info-container {
+    padding: 1em;
+}
+
+.sr-name {
+    font-weight: bold;
+}
+
+.sr-description {
+    font-size: 0.8em;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
