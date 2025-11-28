@@ -1,10 +1,17 @@
 const input = document.getElementById("search-input");
-document.getElementById("search-btn").onclick = searchCommand;
 const searchResultsContainerList = document.getElementById("rc-search-results-container");
 const resultCardTemplateOriginal = document.getElementById("search-result-card-template");
 const resultCardTemplate = resultCardTemplateOriginal.cloneNode(true);
 resultCardTemplateOriginal.remove();
+const searchResultsLog = document.getElementById("rc-search-results-log");
+
 let cardsList = [];
+
+document.getElementById("search-btn").onclick = searchCommand;
+document.getElementById("clear-btn").onclick = clearRecommendationsList;
+input.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") searchCommand();
+});
 
 async function searchCommand() {
     let inputVal = input.value;
@@ -14,9 +21,8 @@ async function searchCommand() {
         const response = await fetch("./travel_recommendation_api.json", {method: "GET"});
         if (!response.ok) throw new Error(`Response status: ${response.status}`);
 
-        let resultVal;
         response.json().then(result => {
-            resultVal = searchAPI(inputVal, result);
+            searchAPI(inputVal, result);
         }).catch( error => {throw new Error(error.message)} );
     }
     catch(error) {
@@ -24,39 +30,37 @@ async function searchCommand() {
     }
 }
 
-function searchAPI(inputVal, api) {
-    //console.log("input: " + inputVal);
-    //console.log(api);
+function searchAPI(inputOrigin, apiData) {
+    const inputVal = inputOrigin.toLowerCase();
 
-    inputVal = inputVal.toLowerCase();
-
-    const entries = Object.entries(api);
-    //console.log("Entries: ");
-    //console.log(entries);
+    const entries = Object.entries(apiData);
     let result = entries.filter(([k, v]) => k.toLowerCase() === inputVal);
-    if (/*!result || */result.length === 0){ // search for specific place
+    
+    // search for specific place
+    if (result.length === 0){
         let resultArr = [];
-        resultArr = entries.filter(([k, v]) => k === "countries")[0][1]
-            .filter(el => el.name.toLowerCase() === inputVal)[0].cities;
-        //console.log(resultArr);
+        const _arr = entries.filter(([k, v]) => k === "countries")[0][1]
+            .filter(el => el.name.toLowerCase() === inputVal);
+        if (Array.isArray(_arr) && _arr.length > 0)
+            resultArr = _arr[0].cities
+        
         if (resultArr.length > 0) {
-            //TODO: UI fill
-            //console.log("Result: ");
-            //console.log(resultArr);
-            //showResult(resultArr);
             result = resultArr;
-        } else
-            alert("No results found!");
+        }
     }
-    else { // search for generic places
-        //console.log("Recommendations: ");
-        //console.log(result[0][1]);
+    // search for generic places
+    else {
         result = result[0][1];
     }
 
     if (result.length > 0) {
         console.log(result);
         showResult(result);
+        searchResultsLog.innerHTML = `Results for ${inputOrigin}`;
+        input.value = "";
+    } else {
+        clearRecommendationsList();
+        alert("No results found!");
     }
 }
 
@@ -89,22 +93,6 @@ function clearRecommendationsList() {
     cardsList = [];
     if (!searchResultsContainerList.classList.contains("hidden"))
         searchResultsContainerList.classList.add("hidden");
+    searchResultsLog.innerHTML = "";
+    input.value = "";
 }
-
-/*function searchRecursively(inputVal, entryArr, resArr) {
-    //oldArr = [...oldArr, ...newArr]
-    if (Object.hasOwn(entryArr, "name")) {
-        if (entryArr.name.toLowerCase() === inputVal) {
-            if (Object.hasOwn(entryArr, "cities")) {
-                resArr = [...resArr, ...entryArr.cities];
-                return;
-            }
-
-            resArr.push(entryArr);
-            return;
-        }
-    }
-
-    if(Array.isArray(entryArr) && entryArr.length > 0)
-        entryArr.forEach(el => searchRecursively(inputVal, el, resArr));
-}*/
