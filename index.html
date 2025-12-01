@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TravelFar.com</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./search-location.css">
+    </head>
+    <body>
+        <header>
+        <nav class="nav">
+            <div class="logo-container">
+                <span class="material-symbols-outlined">near_me</span>
+                <span class="lc-text">TravelFar.com</span>
+            </div>
+            <div class="nav-menu">
+                <a href="./index.html">Home</a>
+                <a href="./about-us.html">About Us</a>
+                <a href="./contact-us.html">Contact Us</a>
+            </div>
+            <div id="search-container" class="input-container">
+                <input id="search-input" type="text">
+                <button id="search-btn" class="material-symbols-outlined">search</button>
+                <button id="clear-btn" class="material-symbols-outlined">close_small</button>
+            </div>
+        </nav>
+        </header>
+        <aside>
+            <div><div></div></div>
+            <nav>
+                <a href=""><img src="./img/x-twitter.png" alt="x twitter"></a>
+                <a href=""><img src="./img/facebook.png" alt="facebook"></a>
+                <a href=""><img src="./img/instagram.png" alt="instagram"></a>
+                <a href=""><img src="./img/you-tube.png" alt="youtube"></a>
+            </nav>
+            <div><div></div></div>
+        </aside>
+        <main>
+            <section class="static-content">
+                <h1>Explore <br>Dream <br>Destination</h1>
+                <p>
+                    It's time to break out of your routine and dive into new horizons.
+                    Let yourself be guided by the beauty and magic of places that only exist in your imagination... for now.
+                    Come with <span class="lc-text">TravelFar</span> and start writing the next chapter of your life,
+                    one destination at a time.
+                </p>
+            </section>
+            <section id="recommendation-conteiner" class="dynamic-content">
+                <!-- scripted content -->
+                <div id="rc-search-results-container" class="hidden">
+                    <!-- template -->
+                    <span id="rc-search-results-log">Results for Bla</span>
+                    <div id="search-result-card-template" class="search-result-card">
+                        <img src="https://danso.info/wp-content/uploads/2025/04/image-11-1024x683.png" alt="" class="sr-img">
+                        <div class="sr-info-container">
+                            <span class="sr-name">Bla, Blabla</span>
+                            <p class="sr-description">blablabla blablabla...</p>
+                            <button class="sr-visit-btn">Visit</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="./travel_recommendation.js"></script>
+    </body>
+</html>
