@@ -6,6 +6,7 @@ resultCardTemplateOriginal.remove();
 const searchResultsLog = document.getElementById("rc-search-results-log");
 
 let cardsList = [];
+const MAX_DISTANCE = 2;
 
 document.getElementById("search-btn").onclick = searchCommand;
 document.getElementById("clear-btn").onclick = clearRecommendationsList;
@@ -30,33 +31,18 @@ async function searchCommand() {
     }
 }
 
-function searchAPI(inputOrigin, apiData) {
-    const inputVal = inputOrigin.toLowerCase();
+function searchAPI(inputVal, apiData) {
+    const inputNormalized = inputVal.toLowerCase();
+    const places = apiData.places;
 
-    const entries = Object.entries(apiData);
-    let result = entries.filter(([k, v]) => k.toLowerCase() === inputVal);
-    
-    // search for specific place
-    if (result.length === 0){
-        let resultArr = [];
-        const _arr = entries.filter(([k, v]) => k === "countries")[0][1]
-            .filter(el => el.name.toLowerCase() === inputVal);
-        if (Array.isArray(_arr) && _arr.length > 0)
-            resultArr = _arr[0].cities
-        
-        if (resultArr.length > 0) {
-            result = resultArr;
-        }
-    }
-    // search for generic places
-    else {
-        result = result[0][1];
-    }
+    let results = places.filter(place => {
+        return place.tags.filter(tag => levenshteinDistance(tag.toLowerCase(), inputNormalized) <= MAX_DISTANCE).length > 0;
+    });
 
-    if (result.length > 0) {
-        console.log(result);
-        showResult(result);
-        searchResultsLog.innerHTML = `Results for ${inputOrigin}`;
+    if (results.length > 0) {
+        console.log(results);
+        showResult(results);
+        searchResultsLog.innerHTML = `Results for ${inputVal}`;
         input.value = "";
     } else {
         clearRecommendationsList();
@@ -95,4 +81,31 @@ function clearRecommendationsList() {
         searchResultsContainerList.classList.add("hidden");
     searchResultsLog.innerHTML = "";
     input.value = "";
+}
+
+//CREDITS: https://stackoverflow.com/questions/18516942/fastest-general-purpose-levenshtein-javascript-implementation
+function levenshteinDistance(s1, s2) {
+    if (s1 === s2)
+        return 0;
+
+    var s1_len = s1.length, s2_len = s2.length;
+    if (s1_len && s2_len) {
+        var i1 = 0, i2 = 0, a, b, c, c2, row = [];
+        while (i1 < s1_len)
+            row[i1] = ++i1;
+        while (i2 < s2_len) {
+            c2 = s2.charCodeAt(i2);
+            a = i2;
+            ++i2;
+            b = i2;
+            for (i1 = 0; i1 < s1_len; ++i1) {
+                c = a + (s1.charCodeAt(i1) === c2 ? 0 : 1);
+                a = row[i1];
+                b = b < a ? (b < c ? b + 1 : c) : (a < c ? a + 1 : c);
+                row[i1] = b;
+            }
+        }
+        return b;
+    }
+    return s1_len + s2_len;
 }

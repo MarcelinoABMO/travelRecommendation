@@ -1,86 +1,95 @@
 {
-    "countries": [
+    "places": [
         {
             "id": 1,
             "name": "Australia",
             "imageUrl": "https://www.viagemcomcharme.com/wp-content/uploads/2017/03/Fotolia_123016149_L-1024x683.jpg",
             "description": "Australia is one of the most multicultural countries in the world and home to the oldest culture on the planet.",
-            "cities": [
-                {
-                    "name": "Sydney, Australia",
-                    "imageUrl": "https://www.viagemcomcharme.com/wp-content/uploads/2017/03/Fotolia_123016149_L-1024x683.jpg",
-                    "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
-                },
-                {
-                    "name": "Melbourne, Australia",
-                    "imageUrl": "https://dayoneintercambios.com.br/wp-content/uploads/2022/05/Melbourne_Australia.jpg",
-                    "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
-                }
-            ]
+            "tags": ["Australia", "country"]
         },
         {
             "id": 2,
-            "name": "Japan",
-            "imageUrl": "https://cdn.craft.cloud/101e4579-0e19-46b6-95c6-7eb27e4afc41/assets/uploads/Tokyo-for-Hero.jpg",
-            "description": "Japan is an archipelago in East Asia known for its unique culture, strong economy, and mountainous landscapes, including the famous Mount Fuji.",
-            "cities": [
-                {
-                    "name": "Tokyo, Japan",
-                    "imageUrl": "https://cdn.craft.cloud/101e4579-0e19-46b6-95c6-7eb27e4afc41/assets/uploads/Tokyo-for-Hero.jpg",
-                    "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
-                },
-                {
-                    "name": "Kyoto, Japan",
-                    "imageUrl": "https://vidamochileira.com.br/wp-content/uploads/2024/08/Kyoto.jpg",
-                    "description": "Known for its historic temples, gardens, and traditional tea houses."
-                }
-            ]
+            "name": "Sydney, Australia",
+            "imageUrl": "https://www.viagemcomcharme.com/wp-content/uploads/2017/03/Fotolia_123016149_L-1024x683.jpg",
+            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.",
+            "tags": ["Sydney", "Australia", "city"]
         },
         {
             "id": 3,
+            "name": "Melbourne, Australia",
+            "imageUrl": "https://dayoneintercambios.com.br/wp-content/uploads/2022/05/Melbourne_Australia.jpg",
+            "description": "A cultural hub famous for its art, food, and diverse neighborhoods.",
+            "tags": ["Melbourne", "Australia", "city"]
+        },
+        {
+            "id": 4,
+            "name": "Japan",
+            "imageUrl": "https://cdn.craft.cloud/101e4579-0e19-46b6-95c6-7eb27e4afc41/assets/uploads/Tokyo-for-Hero.jpg",
+            "description": "Japan is an archipelago in East Asia known for its unique culture, strong economy, and mountainous landscapes, including the famous Mount Fuji.",
+            "tags": ["Japan", "country"]
+        },
+        {
+            "id": 5,
+            "name": "Tokyo, Japan",
+            "imageUrl": "https://cdn.craft.cloud/101e4579-0e19-46b6-95c6-7eb27e4afc41/assets/uploads/Tokyo-for-Hero.jpg",
+            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture.",
+            "tags": ["Tokyo", "Japan", "city", "capital"]
+        },
+        {
+            "id": 6,
+            "name": "Kyoto, Japan",
+            "imageUrl": "https://vidamochileira.com.br/wp-content/uploads/2024/08/Kyoto.jpg",
+            "description": "Known for its historic temples, gardens, and traditional tea houses.",
+            "tags": ["Kyoto", "Japan", "city"]
+        },
+        {
+            "id": 7,
             "name": "Brazil",
             "imageUrl": "https://cdn.kimkim.com/files/a/content_articles/featured_photos/67e29f693c4419341c375d333e11c210955cf3dc/big-4961ddd185dc668d672a13b52b6fe90f.jpg",
             "description": "Brazil offers diverse tourist experiences, including ecotourism in the Amazon and Pantanal, sun and beach destinations along its coast, and cultural attractions in historic cities like Salvador.",
-            "cities": [
-                {
-                    "name": "Rio de Janeiro, Brazil",
-                    "imageUrl": "https://cdn.kimkim.com/files/a/content_articles/featured_photos/67e29f693c4419341c375d333e11c210955cf3dc/big-4961ddd185dc668d672a13b52b6fe90f.jpg",
-                    "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
-                },
-                {
-                    "name": "São Paulo, Brazil",
-                    "imageUrl": "https://danso.info/wp-content/uploads/2025/04/image-11-1024x683.png",
-                    "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
-                }
-            ]
-        }
-    ],
-    "temples": [
+            "tags": ["Brazil", "country"]
+        },
         {
-            "id": 1,
+            "id": 8,
+            "name": "Rio de Janeiro, Brazil",
+            "imageUrl": "https://cdn.kimkim.com/files/a/content_articles/featured_photos/67e29f693c4419341c375d333e11c210955cf3dc/big-4961ddd185dc668d672a13b52b6fe90f.jpg",
+            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks.",
+            "tags": ["Rio de Janeiro", "Brazil", "city"]
+        },
+        {
+            "id": 9,
+            "name": "São Paulo, Brazil",
+            "imageUrl": "https://danso.info/wp-content/uploads/2025/04/image-11-1024x683.png",
+            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife.",
+            "tags": ["São Paulo", "Brazil", "city"]
+        },
+        {
+            "id": 10,
             "name": "Angkor Wat, Cambodia",
             "imageUrl": "https://www.staging.visitsoutheastasia.travel/wp-content/uploads/2019/08/Cambodia-Angkor-Wat-Temple-Siem-Reap-1024x682.jpg",
-            "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+            "description": "A UNESCO World Heritage site and the largest religious monument in the world.",
+            "tags": ["Angkor Wat", "Cambodia", "temple"]
         },
         {
-            "id": 2,
+            "id": 11,
             "name": "Taj Mahal, India",
             "imageUrl": "https://i0.wp.com/www.mochilaoadois.com.br/wp-content/uploads/2019/05/Taj-Mahal_1-min.jpg",
-            "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
-        }
-    ],
-    "beaches": [
-        {
-            "id": 1,
-            "name": "Bora Bora, French Polynesia",
-            "imageUrl": "https://old.theluxtraveller.com/wp-content/uploads/2013/02/Le-Meridien-Bora-Bora-Aerial-1024x682.jpg",
-            "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+            "description": "An iconic symbol of love and a masterpiece of Mughal architecture.",
+            "tags": ["Taj Mahal", "India", "temple"]
         },
         {
-            "id": 2,
+            "id": 12,
+            "name": "Bora Bora, French Polynesia",
+            "imageUrl": "https://old.theluxtraveller.com/wp-content/uploads/2013/02/Le-Meridien-Bora-Bora-Aerial-1024x682.jpg",
+            "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows.",
+            "tags": ["Bora Bora", "French Polynesia", "beach"]
+        },
+        {
+            "id": 13,
             "name": "Copacabana Beach, Brazil",
             "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/032/481/670/small_2x/sunset-at-copacabana-beach-rio-de-janeiro-brazil-ipanema-beach-in-rio-de-janeiro-on-a-gorgeous-sunset-ai-generated-free-photo.jpg",
-            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views.",
+            "tags": ["Copacabana Beach", "Brazil", "Rio de Janeiro", "beach"]
         }
     ]
 }
